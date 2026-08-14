@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smokes CS2 — biblioteca de utilitário</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <span class="puff a"></span>
+    <span class="puff b"></span>
+    <div class="wrap topo-grade">
+      <div>
+        <h1><span class="fumaca">Smokes</span> <span class="vazado">CS2</span></h1>
+        <p class="chamada">Isso aqui é só pra que não esquecer no LIVE algumas smokes.</p>
+      </div>
+
+      <!-- [EDITE] os dois blocos abaixo: troque o # pelo link e mude os textos -->
+      <div class="atalhos">
+        <a class="atalho" href="https://drive.usercontent.google.com/u/0/uc?id=1LQBuCdETsjSaYJhi3cuB3Zs8YznPSZ6o&export=download">
+          <span class="atalho-tag">Clique aqui para baixar</span>
+          <span class="atalho-titulo">Treino</span>
+          <span class="atalho-desc">Minha configuração completa de treinos.</span>
+          <span class="atalho-seta">&#8599;</span>
+        </a>
+        <a class="atalho" href="https://drive.usercontent.google.com/u/0/uc?id=1zI2pzGJXawrEaYmWSg5c8eHIOjbCHqWT&export=download">
+          <span class="atalho-tag">Clique aqui para baixar</span>
+          <span class="atalho-titulo">Auto Exec 2026</span>
+          <span class="atalho-desc">Minha configuração completa para lobbys.</span>
+          <span class="atalho-seta">&#8599;</span>
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="wrap" style="padding-top:34px">
+    <!-- os cartões saem de assets/dados.js -->
+    <section class="grade" id="grade"></section>
+  </main>
+
+  <!-- RODAPE — textos marcados com [EDITE] -->
+<style>
+  /* Remove margens e força o site a ter o tamanho exato da tela */
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<footer class="rodape" style="margin-top: auto; width: 100%; border-top: 1px solid var(--line); padding: 22px 0 40px; background: linear-gradient(180deg, transparent, rgba(14, 22, 27, 0.7)); z-index: 999;">
+  <div class="wrap">
+    <div class="rodape-base" style="display: flex; justify-content: space-between; padding: 0 20px;">
+      <span>2026 · feito por mim, pra mim</span>
+      <span>Projeto pessoal sem vínculo com a Valve</span>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="assets/dados.js"></script>
+  <script src="assets/app.js"></script>
+  <script>montarHome();</script>
+</body>
+</html>
