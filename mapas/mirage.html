@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smokes</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="voltar" href="../index.html">&larr; todos os mapas</a>
+
+    <header class="topo topo-mapa">
+      <span class="puff a" style="right:-6%"></span>
+      <p class="eyebrow" id="codigo"></p>
+      <h1><span class="fumaca" id="nome"></span></h1>
+      <p class="contador" id="contador"></p>
+    </header>
+
+    <main class="fotos" id="fotos"></main>
+  </div>
+
+  <!-- foto em tela cheia: clique na imagem, setas do teclado, Esc para fechar -->
+  <div class="lupa" id="lupa" hidden>
+    <button class="lupa-nav anterior" id="lupaAnterior" aria-label="Anterior">&#8249;</button>
+    <img id="lupaImg" src="" alt="">
+    <button class="lupa-nav proxima" id="lupaProxima" aria-label="Próxima">&#8250;</button>
+    <button class="lupa-fechar" id="lupaFechar" aria-label="Fechar">&times;</button>
+    <p class="lupa-legenda" id="lupaLegenda"></p>
+  </div>
+
+  <!-- RODAPE — textos marcados com [EDITE] -->
+  <footer class="rodape">
+    <div class="wrap">
+      <div class="rodape-base">
+        <!-- [EDITE] ano e crédito -->
+        <span>2026 · feito por mim, pra mim</span>
+        <!-- [EDITE] aviso legal — recomendo manter -->
+        <span>Projeto pessoal sem vínculo com a Valve · Counter-Strike é marca da Valve Corporation</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/dados.js"></script>
+  <script src="../assets/app.js"></script>
+  <!-- as lineups deste mapa ficam em assets/dados.js, no bloco com este slug -->
+  <script>montarMapa("mirage");</script>
+</body>
+</html>
