@@ -21,7 +21,7 @@ function plural(n, palavra) {
 /* função para escolher "do" ou "da" */
 function artigo(origem) {
   // Lista de palavras femininas
-  const femininas = ["Base", "Porta", "Janela", "Ligação", "Cabecinha", "Market", "TV", "Van", "Varanda",];
+  const femininas = ["Base", "Porta", "Janela", "Ligação", "Cabecinha", "Market", "TV", "Van", "Varanda", "Banana",];
   const primeira = origem.split(" ")[0];
   return femininas.includes(primeira) ? "da" : "do";
 }

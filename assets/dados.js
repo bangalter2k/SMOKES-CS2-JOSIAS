@@ -1,43 +1,4 @@
-/* ============================================================
-   SMOKES CS2 — TODOS OS DADOS DO SITE FICAM AQUI
-   ============================================================
 
-   É o único arquivo que você precisa editar no dia a dia.
-   Os cartões da home, as contagens e as páginas de mapa
-   são montados a partir daqui.
-
-   COMO ADICIONAR UMA LINEUP
-   -------------------------
-   Copie uma linha e mude os campos:
-
-     { destino: "Window", origem: "Base TR", lado: "T" }
-
-     destino → onde a fumaça cai
-     origem  → de onde você joga
-     lado    → "T" (ataque) ou "CT" (defesa)
-     nota    → opcional, ex.: nota: "jump throw"
-
-   O NOME DA IMAGEM
-   ----------------
-   O site procura sozinho, dentro da pasta img/, o arquivo:
-
-     mapa-destino-origem.png   (tudo minúsculo, espaço vira hífen)
-
-   O exemplo acima procura por:  img/mirage-window-t-spawn.png
-
-   Se o seu arquivo tiver outro nome ou for .png, avise assim:
-
-     { destino: "Window", origem: "Base TR", lado: "T", arquivo: "minha-foto.png" }
-
-   Enquanto a imagem não existir, o card mostra "sem captura" —
-   nada quebra.
-
-   PARA ADICIONAR UM MAPA NOVO
-   ---------------------------
-   1. Copie um bloco de mapa inteiro aqui embaixo e mude slug/nome/codigo
-   2. Duplique um arquivo de mapas/ com o nome do slug (ex.: mapas/train.html)
-      e troque só a linha  montarMapa("...")  no fim do arquivo
-   ============================================================ */
 
 const MAPAS = [
   {
@@ -80,13 +41,13 @@ const MAPAS = [
     nome: "Overpass",
     codigo: "de_overpass",
     lineups: [
-      { destino: "Heaven", origem: "A Long", lado: "T" },
-      { destino: "Bank", origem: "A Long", lado: "T" },
-      { destino: "Barrels", origem: "A Long", lado: "T" },
-      { destino: "Monster", origem: "B Short", lado: "T" },
-      { destino: "CT", origem: "Water", lado: "T" },
-      { destino: "Bathrooms", origem: "Water", lado: "T" },
-      { destino: "Connector", origem: "CBase TR", lado: "CT" }
+      { destino: "Heaven", origem: "A Long", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Bank", origem: "A Long", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Barrels", origem: "A Long", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Monster", origem: "B Short", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "CT", origem: "Water", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Bathrooms", origem: "Water", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Connector", origem: "CBase TR", lado: "CT", arquivo: "", nota: "(Jumpthrow)" },
     ]
   },
   {
@@ -94,13 +55,13 @@ const MAPAS = [
     nome: "Ancient",
     codigo: "de_ancient",
     lineups: [
-      { destino: "Temple", origem: "A Main", lado: "T" },
-      { destino: "CT", origem: "A Main", lado: "T" },
-      { destino: "Donut", origem: "Mid", lado: "T" },
-      { destino: "Cave", origem: "B Main", lado: "T" },
-      { destino: "Ramp", origem: "B Main", lado: "T" },
-      { destino: "Heaven", origem: "B Main", lado: "T" },
-      { destino: "Top Mid", origem: "CBase TR", lado: "CT" }
+      { destino: "Temple", origem: "A Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "CT", origem: "A Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Donut", origem: "Mid", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Cave", origem: "B Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Ramp", origem: "B Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Heaven", origem: "B Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Top Mid", origem: "CBase TR", lado: "CT", arquivo: "", nota: "(Jumpthrow)" },
     ]
   },
   {
@@ -108,14 +69,14 @@ const MAPAS = [
     nome: "Inferno",
     codigo: "de_inferno",
     lineups: [
-      { destino: "CT Banana", origem: "Base TR", lado: "T" },
-      { destino: "Coffins", origem: "Second Mid", lado: "T" },
-      { destino: "Library", origem: "Apps", lado: "T" },
-      { destino: "Moto", origem: "Apps", lado: "T" },
-      { destino: "Arch", origem: "Second Mid", lado: "T" },
-      { destino: "Car", origem: "Banana", lado: "T" },
-      { destino: "Fountain", origem: "CBase TR", lado: "CT" },
-      { destino: "Bottom Mid", origem: "CBase TR", lado: "CT" }
+      { destino: "Caixao", origem: "Banana", lado: "T", arquivo: "inferno-banana-caixao.png", nota: "(Jumpthrow)" },
+      { destino: "CT", origem: "Banana", lado: "T", arquivo: "inferno-banana-ct.png", nota: "(Jumpthrow)" },
+      { destino: "Banana", origem: "(A) Areia 2", lado: "T", arquivo: "inferno-a-retake-b.jpg", nota: "(Jumpthrow)" },
+      { destino: "Caminhao", origem: "Tapete", lado: "T", arquivo: "inferno-tpt-areia.png", nota: "(Jumpthrow)" },
+      { destino: "Xuxa", origem: "Areia", lado: "T", arquivo: "inferno-areia-xuxa.jpg", nota: "(Jumpthrow)" },
+      { destino: "Meio", origem: "Areia", lado: "T", arquivo: "inferno-areia-meio.jpg", nota: "(Jumpthrow)" },
+      { destino: "Areia", origem: "Meio", lado: "T", arquivo: "inferno-meio-areia.png", nota: "(Jumpthrow)" },
+      { destino: "Rato", origem: "Base CT", lado: "CT", arquivo: "inferno-ct-rato.jpg", nota: "(Jumpthrow)" },
     ]
   },
   {
@@ -140,13 +101,13 @@ const MAPAS = [
     nome: "Nuke",
     codigo: "de_nuke",
     lineups: [
-      { destino: "Heaven", origem: "Outside", lado: "T" },
-      { destino: "Hut", origem: "Outside", lado: "T" },
-      { destino: "Squeaky", origem: "Outside", lado: "T" },
-      { destino: "Ramp", origem: "Outside", lado: "T" },
-      { destino: "Vents", origem: "Ramp", lado: "T" },
-      { destino: "Red", origem: "Outside", lado: "T" },
-      { destino: "Silo", origem: "CBase TR", lado: "CT" }
+      { destino: "Heaven", origem: "Outside", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Hut", origem: "Outside", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Squeaky", origem: "Outside", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Ramp", origem: "Outside", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Vents", origem: "Ramp", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Red", origem: "Outside", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Silo", origem: "CBase TR", lado: "CT", arquivo: "", nota: "(Jumpthrow)" },
     ]
   },
   {
@@ -154,12 +115,12 @@ const MAPAS = [
     nome: "Cache",
     codigo: "de_cache",
     lineups: [
-      { destino: "Highway", origem: "A Main", lado: "T" },
-      { destino: "CT", origem: "A Main", lado: "T" },
-      { destino: "Squeaky", origem: "A Main", lado: "T" },
-      { destino: "Checkers", origem: "B Main", lado: "T" },
-      { destino: "Heaven", origem: "B Main", lado: "T" },
-      { destino: "Garage", origem: "CBase TR", lado: "CT" }
+      { destino: "Highway", origem: "A Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "CT", origem: "A Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Squeaky", origem: "A Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Checkers", origem: "B Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Heaven", origem: "B Main", lado: "T", arquivo: "", nota: "(Jumpthrow)" },
+      { destino: "Garage", origem: "CBase TR", lado: "CT", arquivo: "", nota: "(Jumpthrow)" },
     ]
   }
 ];
